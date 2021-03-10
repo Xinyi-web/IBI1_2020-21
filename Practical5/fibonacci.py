@@ -3,7 +3,7 @@ x=1
 y=1
 print(x)
 print(y)
-while count>2
+while count>2:
 count=count-1
 z=y
 y=x+y
