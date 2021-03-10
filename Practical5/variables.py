@@ -10,3 +10,15 @@ elif d>e:
 else:
   print("d=e")
 
+
+#Booleans
+X=True
+Y=False
+Z=(X and not Y) or (Y and not X)
+if Z==True:
+  print("True")
+
+W=(X!=Y)
+if Z==W:
+  print("Z==W")
+
