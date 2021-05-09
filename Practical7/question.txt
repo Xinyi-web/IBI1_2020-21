@@ -1,1 +1,1 @@
-
+You should extract the row with the date in the 2019 and put them in a project named "2019_date_cases".
