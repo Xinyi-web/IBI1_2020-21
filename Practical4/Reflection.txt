@@ -1,1 +1,1 @@
-Bad!
+In fact, I have a hard time submitting new documents with "git push origin master", so I prefer to do it on the web or on GitHub.
