@@ -29,10 +29,8 @@ plt.show()
 plt.plot(world_dates, world_new_deaths, 'bo')
 plt.show()
 #code for File question.txt
-#1\remove rows of world data
 world_specific_cases = covid_data[covid_data['location']!="World"]
-#2\get target day data
-day_data = world_specific_cases[covid_data['date']=='2019/12/31']
-print(day_data)
-
-
+day_data = world_specific_cases[covid_data['date']=="2019/3/14"]
+total_case = day_data.loc[:,"total_cases"]
+plt.boxplot(total_case)
+plt.show()
