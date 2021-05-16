@@ -1,0 +1,31 @@
+1. the alignment score and the percentage of identical amino acids for each comparison
+
+(1)human gene and mouse gene
+    alignment score: 1091
+    percentage of identical amino acids: 89.63963963963964%
+    distance: 23
+(2)human gene and random gene
+    alignment score: -250
+    percentage of identical amino acids: 5.405405405405405%
+    distance: 210
+(3)mouse gene and random gene
+    alignment score: -250
+    percentage of identical amino acids: 5.855855855855852%
+    distance: 209
+
+2. what biological, or evolutionary, interpretation you think we can make from these data
+
+The alignment score of the sequence between human gene and mouse gene is much bigger than both of them between the random gene.
+And the percentage of identical amino acids between the human and mouse gene is quite large. While the random gene with them are even negative.
+What's more, the distance of different genes between the human and mouse gene is very small. While the random gene with them are large.
+In conclusion, we can say that human and mouse are closely related in evolutionary terms.
+
+
+
+
+
+
+
+    
+    
+
