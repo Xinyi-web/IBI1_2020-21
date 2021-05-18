@@ -1,36 +1,58 @@
 import os
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
 os.getcwd()
-os.chdir("C:/Users/Administrator/Desktop/IBI1/Practical7")
+os.chdir("C:/Users/Administrator/Desktop/大一下/IBI1/Practical7")
 os.listdir()
 #code for importing the .csv file works
 covid_data = pd.read_csv("full_data.csv")
 #code for showing all colimns, and every second row between 0 and 10
-covid_data.iloc[0:10:2,:]
+a = covid_data.iloc[0:12:2,:]
+print(a)
+
 #code for using a Boolean to show “total_cases” for all rows corresponding to Afghanistan
-Afghanistan_cases = covid_data[covid_data['location']=="Afghanistan"]
-target_cases = Afghanistan_cases.loc[0:81,"total_cases"]
-#code for computing the mean and median of new cases for the entire world
-world_cases = covid_data[covid_data['location']=="World"]
-world_new_cases =  world_cases.loc[:,"new_cases"]
-np.mean(world_new_cases)
-np.median(world_new_cases)
-#code for creating a boxplot of new cases worldwide
-plt.boxplot(world_new_cases)
+covid_data.loc[(covid_data["location"] == 'Afghanistan'), ["total_cases"]]
+data1 = []
+#choose data in covid_data in Afghanistan
+for i in range (0,7996):
+	if covid_data.iloc[i,1] == "Afghanistan":
+		data1.append(True)
+	else:
+		data1.append(False)
+b=covid_data.loc[data1,"total_cases"]
+print(b)
+
+#code for the worldwide new cases
+data2 = []
+#choose data in covid_data in the world
+for i in range (0,7996):
+     if covid_data.iloc[i,1] == "World":
+             data2.append(True)
+     else:
+             data2.append(False)
+world_new_cases = covid_data.loc[data2,"new_cases"]
+
+#calculate the mean and median 
+mean = str(np.mean(world_new_cases))
+median = str(np.median(world_new_cases))
+print("the mean and median of new cases worldwide are "+mean+" and "+median)
+
+#draw the boxplot
+plt.title('Worldwide new cases')
+plt.ylabel('word new case number')
+plt.xlabel('date')
+plt.boxplot(world_new_cases,vert=True,whis=2,patch_artist=True,showmeans=True,meanline=True,showbox=True,showcaps=True)
 plt.show()
-#code for plotting both new cases and new deaths worldwide（before here the code is right)
-effect_cases = covid_data[covid_data['location']!="World"]
-world_dates = effect_cases.loc[:,"date"]
-world_new_deaths = effect_cases.loc[:,"new_deaths"]
-plt.plot(world_dates, world_new_cases, 'bo')
-plt.show()
-plt.plot(world_dates, world_new_deaths, 'bo')
-plt.show()
+
 #code for File question.txt
-world_specific_cases = covid_data[covid_data['location']!="World"]
-day_data = world_specific_cases[covid_data['date']=="2019/3/14"]
-total_case = day_data.loc[:,"total_cases"]
-plt.boxplot(total_case)
-plt.show()
+data3 = []
+#choose data in covid_data in Albania
+for i in range (0,7996):
+     if covid_data.iloc[i,1] == "Albania":
+             data3.append(True)
+     else:
+             data3.append(False)
+Albania_new_cases = covid_data.loc[data3,"new_cases"]
+mean = str(np.mean(Albania_new_cases))
+print("the mean of Albania new case is "+mean)
