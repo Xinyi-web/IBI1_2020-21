@@ -12,7 +12,6 @@ a = covid_data.iloc[0:12:2,:]
 print(a)
 
 #code for using a Boolean to show “total_cases” for all rows corresponding to Afghanistan
-covid_data.loc[(covid_data["location"] == 'Afghanistan'), ["total_cases"]]
 data1 = []
 #choose data in covid_data in Afghanistan
 for i in range (0,7996):
