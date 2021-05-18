@@ -1,3 +1,3 @@
 question: the mean of the new cases in Albania
-answer code: line 32 to line 36
+answer code: line 48 to line 58
 discussion: the result is corresponding with my expection, because I set it quite easy
