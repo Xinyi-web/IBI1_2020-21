@@ -6,6 +6,7 @@ def g(first_name,last_name):
 def f(gra_code,gra_poster,gra_exam):
     total = gra_code*0.4 + gra_poster*0.3 + gra_exam*0.3
     return(total)
+
 # give an example
 first_name = "Cai"
 last_name = "xinyi"
