@@ -1,5 +1,7 @@
 question: the mean of the new cases in Albania
 
+
 answer code: line 47 to line 57
+
 
 discussion: the result is corresponding with my expection, because I set it quite easy
