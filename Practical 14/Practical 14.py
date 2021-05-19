@@ -5,7 +5,6 @@ import xml.dom.minidom
 from xml.dom.minidom import parse
 
 # I find it hard for me to eliminate the redundancy, so I discussed and wrote this method with my classmates
-
 #use the common codes to read and parse the xml.
 DOMTree = xml.dom.minidom.parse("go_obo(1)(1)(1)(1).xml")
 collection = DOMTree.documentElement
