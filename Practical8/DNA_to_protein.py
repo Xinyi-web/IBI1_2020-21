@@ -3,6 +3,7 @@ seq = 'ATGCGACTACGATCGAGGGCC'
 Len = len(seq)
 a = Len/3
 d = ''
+
 while a>0:
     #Read forward along the fragment 3 by 3
     b = seq[:3]
