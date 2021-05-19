@@ -10,7 +10,7 @@ for i in x:
         full_seq = re.sub(r'.+]','',i)
         final_seq = re.sub(r'\n','',full_seq)#abstract and deal with the sequence
         L = len(final_seq)#calculate the length
-        file2.write(f'{gene_name:20}'+str(L)+'\n'+final_seq)#output the results
+        file2.write(f'{gene_name:20}'+str(L)+'\n'+final_seq+'\n')#output the results
 
 file1.close()
 file2.close()
